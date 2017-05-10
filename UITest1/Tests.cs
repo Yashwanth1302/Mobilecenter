@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
@@ -28,12 +29,12 @@ namespace UITest1
         [Test]
         public void AppLaunches()
         {
-            app.Screenshot("First screen.");           
+            app.Screenshot("First SCREEN.");           
         }
          [Test]
         public void EnterNames()
         {
-            app.Screenshot("First screen.");
+            app.Screenshot("First SCREEN.");
             Assert.IsFalse(app.Query("StartGameButton").First().Enabled, "Button should not be enabled");
 
             app.EnterText("Player1", "James");
@@ -48,25 +49,7 @@ namespace UITest1
 
             Assert.True(app.Query("StartGameButton").First().Enabled, "Button should be enabled");
         }
-        [Test]
-        public void EnterNames()
-        {
-            app.Screenshot("First screen.");
-            Assert.IsFalse(app.Query("StartGameButton").First().Enabled, "Button should not be enabled");
-
-            app.EnterText("Player1", "James");
-            app.DismissKeyboard();
-            app.Screenshot("Entered Player 1.");
-            Assert.IsFalse(app.Query("StartGameButton").First().Enabled, "Button should not be enabled");
-
-            app.EnterText("Player2", "Heather");
-            app.DismissKeyboard();
-
-            app.Screenshot("Entered Player 2.");
-
-            Assert.True(app.Query("StartGameButton").First().Enabled, "Button should be enabled");
-        }
-
+      
         [Test]
         public void PlayGame()
         {
