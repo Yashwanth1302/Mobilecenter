@@ -22,6 +22,7 @@ namespace App4.Droid
 
             base.OnCreate(bundle);
             MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Analytics), typeof(Crashes));
+            MobileCenter.Configure("875934af-c160-48c6-83f0-371d4b36baee");
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());

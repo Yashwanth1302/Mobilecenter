@@ -30,13 +30,13 @@ namespace App4
             //    }
             //};
 
-            MainPage = new NavigationPage(new Register());
+            MainPage = new NavigationPage(new Studentlist());
         }
 
         protected override void OnStart()
         {
             // Handle when your app starts
-            MobileCenter.Start("2dde73c7-e61c-49f0-aace-6430fb771fb3", typeof(Analytics), typeof(Crashes));
+            MobileCenter.Start("875934af-c160-48c6-83f0-371d4b36baee", typeof(Analytics), typeof(Crashes));
 
         }
 
